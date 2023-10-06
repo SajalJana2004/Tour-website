@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Beautiful Website</title>
+    <style>
+        /* Reset some default browser styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/*  lobal styles  */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/*   Header styles  */
+.header {
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ff6600;
+}
+
+/*  Hero section styles  */
+.hero {
+    text-align: center;
+    padding: 5rem 0;
+    background-color: #ff6600;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #fff;
+    color: #ff6600;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff6600;
+    color: #fff;
+}
+
+/*  Features section styles  */
+.features {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature {
+    text-align: center;
+}
+
+.feature h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Footer styles */
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #333;
+    color: #fff;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    display: block;
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: #333;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.3s;
+}
+
+.sidebar a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #555;
+}
+
+#menu-toggle:checked + #menu-icon + .sidebar {
+    left: 0;
+    width: 250px;
+}
+
+.content {
+    margin-left: 5.0rem;
+    padding: 0px;
+   
+    transition: 0.3s;
+}
+
+#menu-toggle:checked + #menu-icon + .sidebar + .content {
+    margin-left: 250px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+
+    .sidebar a {
+        font-size: 16px;
+    }
+
+    #menu-icon {
+        font-size: 24px;
+    }
+}
+.company_symbol{
+    position: relative;
+    left: -650px;
+    top: -5px;
+    height: 50px;
+    width: 60px;
+}
+.company_name{
+    position: relative;
+    left: -830px;
+    top: 7px;
+    color: #ff6600;
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <img class="company_symbol" src="travel.png" alt="">
+            <div class="company_name"><b>Tour de World</b></div>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Welcome to Tour de World</h1>
+        <p>Your go-to destination for stunning designs.</p>
+        <a href="gym_website.html" class="btn">Explore Now</a>
+    </section>
+    <section class="features">
+        <div class="feature">
+            <h2>Quality Design</h2>
+            <p>Our designs are carefully crafted to captivate your audience.</p>
+        </div>
+        <div class="feature">
+            <h2>Responsive Layout</h2>
+            <p>Your website will look great on all devices and screen sizes.</p>
+        </div>
+        <div class="feature">
+            <h2>Easy to Customize</h2>
+            <p>Customize the design to match your brand's unique identity.</p>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>&copy; 2023 Beautiful Website. All rights reserved.</p>
+    </footer>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" id="menu-icon">&#9776;</label>
+
+    <div class="sidebar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact Us</a>
+    </div>
+</body>
+</html>
